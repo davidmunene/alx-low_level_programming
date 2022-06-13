@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * reset_to_98 - A function
- * @i: is the int parameter
+ * @n: is the int parameter
  * Return: Always 0;
  */
-void reset_to_98(int *i)
+void reset_to_98(int *n)
 {
-	*i = 98;
+	*n = 98;
 }
