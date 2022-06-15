@@ -1,15 +1,16 @@
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _strcat - Join two strings
+ * _strcat - function to concatenate two strings
  * @dest: destination pointer
  * @src: source pointer
- * Return: Concatenated string
+ * Return:  a pointer to the destination pointer
  */
+
 char *_strcat(char *dest, char *src)
 {
-	int a, j;
+	int i;
+	int j;
 	int len = 0;
 
 	for (j = 0; dest[j] != '\0'; j++)
