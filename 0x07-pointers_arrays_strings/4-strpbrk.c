@@ -4,7 +4,7 @@
  * @s: string
  * @accept: accept array
  *
- * Return: 
+ * Return: a pointer
  */
 char *_strpbrk(char *s, char *accept)
 {
