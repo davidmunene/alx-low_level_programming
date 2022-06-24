@@ -1,55 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
 /**
- * main - function to print change returned
- * @argv: arguments passed
- * @argc: argument count
+ * main - prints the minimum number of coins
+ * to make change for an amount of money
+ * @argc: n args
+ * @argv: arr args
  * Return: 0
  */
-
 int main(int argc, char *argv[])
 {
-	int temp, count = 0;
+	int value, c;
 
+	c = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	temp = atoi(argv[1]);
-	while (temp)
+	value = atoi(argv[1]);
+	if (value < 0)
 	{
-		if (temp < 0)
-		{
-			printf("%d\n", 0);
-			return (0);
-		}
-		if (temp == 1)
-		{
-			count++;
-			temp -= 1;
-		}
-		else if ((temp > 1) && (temp < 5))
-		{
-			count++;
-			temp -= 2;
-		}
-		else if ((temp >= 5) && (temp < 10))
-		{
-			count++;
-			temp -= 5;
-		}
-		else if ((temp >= 10) && (temp < 25))
-		{
-			count++;
-			temp -= 10;
-		}
-		else if (temp >= 25)
-		{
-			count++;
-			temp -= 25;
-		}
+		printf("%d\n", 0);
+		return (0);
 	}
-	printf("%d\n", count);
+	if (value % 25 >= 0)
+	{
+		c += value / 25;
+		value = value % 25;
+	}
+	if (value % 10 >= 0)
+	{
+		c += value / 10;
+		value = value % 10;
+	}
+	if (value % 5 >= 0)
+	{
+		c += value / 5;
+		value = value % 5;
+	}
+	if (value % 2 >= 0)
+	{
+		c += value / 2;
+		value = value % 2;
+	}
+	if (value % 1 >= 0)
+	{
+		c += value / 1;
+	}
+	printf("%d\n", c);
 	return (0);
 }
