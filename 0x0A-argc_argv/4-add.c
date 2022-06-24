@@ -6,7 +6,8 @@
 /**
  * main - Entry Point : Add Positive Numbers
  * @argc: Number of Command Line Arguments
- * @argv: Array that contains the program Command Line Arguments
+ * @argv: Array that contains the program 
+ * Command Line Arguments
  * Return: 0
  */
 
