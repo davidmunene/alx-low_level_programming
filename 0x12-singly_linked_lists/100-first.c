@@ -8,5 +8,5 @@ void myFirst(void) __attribute__ ((constructor));
 void myFirst(void)
 {
 	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house uponmy back!\n");
+	printf("I bore my house upon my back!\n");
 }
